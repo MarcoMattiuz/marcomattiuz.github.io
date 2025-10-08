@@ -7,11 +7,15 @@
     html, body {
       height: 100%;
       margin: 0;
+      overflow: hidden; /* Previene lo scrolling */
+      position: fixed;  /* Blocca la pagina */
+      width: 100%;
     }
 
     /* Body che occupa il 100% della window e mostra uno sfondo croppato */
     body {
       min-height: 100vh;             /* copre sempre l'altezza della finestra */
+      max-height: 100vh; /* Limita l'altezza massima alla viewport */
       background-image: var(--bg-image);
       background-size: cover;        /* scala e ritaglia per riempire (crop) */
       background-position: center;   /* centra l'immagine */
